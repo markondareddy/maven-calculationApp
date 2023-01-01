@@ -32,9 +32,10 @@ pipeline {
         
         stage('Deploy') {
             steps {
+                echo 'Deploy to server'
              // withCredentials([sshUserPrivateKey(credentialsId: 'deployment-tomcat', keyFileVariable: '', passphraseVariable: '', usernameVariable: '')]) {
               //sh "curl -v -u 'deployment-tomcat' -T /var/lib/jenkins/workspace/pipeline-project1/target/CalculationMavenApp.war 'http://ec2-54-227-222-119.compute-1.amazonaws.com:8080/manager/text/deploy?path=/pipeline_project1&update=true'"
-              }
+              //}
             }
         }
         
